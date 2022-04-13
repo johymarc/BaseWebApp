@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
     <% include ../helpers/head %>
+    
 </head>
 
 <body>
@@ -8,16 +9,17 @@
   <!-- Check out more components here: http://getbootstrap.com/components/ -->
   <div class="page-header">
     <% include ../helpers/navbar %>
+
   
-    <h1>Hello world</h1>
+    <h1>Database Web App </h1>
   </div>
 
-  <p>Click on the button for a surprise.</p>
+  <button id="buton">Click me</button>
 
-  <button onClick="showPicture()" class="btn btn-dark">Click me</button>
-
-  <div id="image"></div>
-  
+  <script type="module">
+    import {handleSignin} from './js/firebase.js'
+    document.querySelector('#buton').addEventListener('click', handleSignin)
+  </script>
 </body>
 
 </html>
